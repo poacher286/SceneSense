@@ -1,0 +1,10 @@
+opencv-python
+mss
+numpy
+Pillow
+torch
+transformers
+pyserial
+PySide6
+loguru
+python-dotenv
