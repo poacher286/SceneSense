@@ -1,5 +1,260 @@
+# ============================================================
+# SceneSense .gitignore
+# Python + PlatformIO + macOS + VS Code
+# ============================================================
+
+#############################
+# Python
+#############################
+
 __pycache__/
+*.py[cod]
+*$py.class
+
+#############################
+# Virtual Environment
+#############################
+
 .venv/
-.env
+venv/
+env/
+ENV/
+
+#############################
+# Python Packaging
+#############################
+
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+wheels/
+share/python-wheels/
+
+*.egg-info/
+*.egg
+
+#############################
+# Installer Logs
+#############################
+
+pip-log.txt
+pip-delete-this-directory.txt
+
+#############################
+# Unit Test / Coverage
+#############################
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+.tox/
+.nox/
+
+coverage.xml
+*.cover
+
+#############################
+# Type Checker
+#############################
+
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+.pyre/
+
+#############################
+# Ruff
+#############################
+
+.ruff_cache/
+
+#############################
+# Pyright
+#############################
+
+.pyright/
+
+#############################
+# Jupyter
+#############################
+
+.ipynb_checkpoints/
+
+#############################
+# Logs
+#############################
+
 logs/
-*.pyc
+*.log
+
+#############################
+# Runtime Files
+#############################
+
+*.pid
+*.seed
+*.out
+
+#############################
+# Local Configuration
+#############################
+
+config/config.yaml
+config/local.yaml
+.env
+.env.*
+
+#############################
+# Secrets
+#############################
+
+*.pem
+*.key
+*.crt
+*.p12
+
+#############################
+# macOS
+#############################
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+Icon?
+._*
+
+.Spotlight-V100
+.Trashes
+
+#############################
+# Windows
+#############################
+
+Thumbs.db
+Desktop.ini
+
+#############################
+# VS Code
+#############################
+
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+#############################
+# IntelliJ / PyCharm
+#############################
+
+.idea/
+
+#############################
+# PlatformIO
+#############################
+
+firmware/.pio/
+firmware/.vscode/
+
+#############################
+# Arduino
+#############################
+
+*.ino.bin
+*.hex
+
+#############################
+# Temporary Files
+#############################
+
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+#############################
+# Generated Images
+#############################
+
+captures/
+screenshots/
+
+#############################
+# AI Models
+#############################
+
+models/
+cache/models/
+
+#############################
+# HuggingFace Cache
+#############################
+
+.huggingface/
+.cache/
+.cache/huggingface/
+
+#############################
+# Benchmark Results
+#############################
+
+benchmark/
+profiling/
+
+#############################
+# Generated Reports
+#############################
+
+reports/
+
+#############################
+# Local Test Data
+#############################
+
+test_output/
+
+#############################
+# Serial Monitor Dumps
+#############################
+
+serial_logs/
+
+#############################
+# Firmware Build Artifacts
+#############################
+
+firmware/build/
+
+#############################
+# OS Generated Files
+#############################
+
+ehthumbs.db
+.directory
+
+#############################
+# Git
+#############################
+
+*.orig
+
+#############################
+# Keep Example Config
+#############################
+
+!config/config.example.yaml
+
+#############################
+# Keep Documentation
+#############################
+
+!docs/**
