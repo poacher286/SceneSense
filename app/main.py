@@ -1,5 +1,10 @@
-def main():
-    print('SceneSense')
+from app.bootstrap import Bootstrap
 
-if __name__=='__main__':
+
+def main():
+    app = Bootstrap()
+    app.start()
+
+
+if __name__ == "__main__":
     main()
