@@ -33,6 +33,8 @@ class Bootstrap:
 
         self.initialize_capture()
 
+        self.run_capture_diagnostics()
+
         self.initialize_device()
 
         print("\nSceneSense is ready.\n")
@@ -63,7 +65,7 @@ class Bootstrap:
 
     def initialize_capture(self):
 
-        self.capture = ScreenCapture(self.event_bus)
+        self.capture = ScreenCapture()
 
         self.logger.info("Screen Capture initialized")
 
@@ -72,3 +74,18 @@ class Bootstrap:
         self.device = SerialController()
 
         self.logger.info("Device Controller initialized")
+
+
+    def run_capture_diagnostics(self):
+
+        self.logger.info("Running screen capture diagnostics...")
+
+        self.capture.print_monitor_info()
+
+        frame = self.capture.capture_once(save_debug_image=False)
+
+        self.logger.info(
+            f"Captured frame: {frame.width}x{frame.height}"
+        )
+
+        self.logger.info("Screen capture diagnostics completed.")   
