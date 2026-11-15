@@ -235,46 +235,51 @@ SceneSense/
 
 ## Language
 
-Python 3.12+
+Python 3.12+ (currently using Python 3.12 in development)
 
 ---
 
 ## Computer Vision
 
-- OpenCV
-- MSS
+- **OpenCV** (`cv2`): Image preprocessing and analysis
+- **MSS**: Lightweight screenshot capture
 
 ---
 
 ## AI
 
-- PyTorch
-- Transformers
-- CLIP (initial model)
+- **PyTorch**: Deep learning framework
+- **Transformers**: Hugging Face models library
+- **CLIP**: Vision-language model for scene recognition (Phase 1)
+- Future: SigLiP, Florence-2 for enhanced capabilities
 
 ---
 
 ## UI
 
-- PySide6
+- **PySide6**: Desktop dashboard and monitoring interface
 
 ---
 
 ## Device Communication
 
-- PySerial
+- **PySerial**: USB serial communication with ESP32 diffuser
+- Protocol: Custom binary protocol defined in `docs/hardware/PROTOCOL.md`
 
 ---
 
 ## Hardware
 
-- ESP32
+- **ESP32**: Wi-Fi/Bluetooth-enabled microcontroller for scent diffuser
+- Current: Single output (solenoid valve control)
+- Future: Multiple cartridge support, RGB indicators
 
 ---
 
 ## Logging
 
-- Loguru
+- **Loguru**: Structured logging with file rotation
+- Log levels: DEBUG, INFO, WARNING, ERROR, CRITICAL
 
 ---
 

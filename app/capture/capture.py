@@ -8,14 +8,23 @@ from mss import mss
 
 from app.capture.frame import Frame
 from app.capture.monitor import MonitorManager
+from app.logger.logger import Logger
+
+
+# Initialize logger with module path (fallback if none passed)
+_logger_instance = None
 
 
 class ScreenCapture:
-
-    def __init__(self):
+    def __init__(self, logger=None):
         self.sct = mss()
         self.monitor_manager = MonitorManager()
-        self.monitor = self.monitor_manager.get_primary_monitor()
+        # Accept passed logger or create module-level fallback
+        if logger is not None:
+            self.logger = logger
+        else:
+            from app.logger.logger import Logger
+            self.logger = Logger("app.capture.capture")
 
     def print_monitor_info(self):
         print("\nPrimary Monitor")
@@ -39,6 +48,8 @@ class ScreenCapture:
 
         start = time.perf_counter()
 
+        logger.debug("Starting capture operation", method="capture_once")
+
         # Capture screen
         screenshot = self.sct.grab(self.monitor)
 
@@ -50,7 +61,15 @@ class ScreenCapture:
             self._save_debug_image(image)
 
         elapsed = (time.perf_counter() - start) * 1000
-        print(f"Capture Time : {elapsed:.2f} ms")
+        logger.info(
+            "Frame captured successfully",
+            extra={
+                "duration_ms": round(elapsed, 2),
+                "width": image.shape[1],
+                "height": image.shape[0],
+                "method": "capture_once",
+            },
+        )
 
         return Frame(
             image=image,
