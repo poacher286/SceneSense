@@ -1,0 +1,3 @@
+- [skill-creation-protocols](skill-creation-protocols.md) — Use /superpowers:writing-skills and create skills under project/.claude/skills/
+- [test-output-location](test-output-location.md) — Store all test results in output/ folder
+- [output-folder-convention](output-folder-convention.md) — Define /output structure for test artifacts

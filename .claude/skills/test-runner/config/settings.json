@@ -1,0 +1,9 @@
+{
+  "timeout_seconds": 300,
+  "parallel_execution": true,
+  "output_format": "text",
+  "json_output_path": null,
+  "fail_fast": false,
+  "coverage_enabled": false,
+  "cov_reporter": "term"
+}
