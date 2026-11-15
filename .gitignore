@@ -248,6 +248,13 @@ ehthumbs.db
 *.orig
 
 #############################
+# Local Development (not pushed to main)
+#############################
+
+.claude/
+memory/
+
+#############################
 # Keep Example Config
 #############################
 
@@ -258,3 +265,10 @@ ehthumbs.db
 #############################
 
 !docs/**
+
+#############################
+# Project-level Docs (local only)
+#############################
+
+IMPLEMENTATION_PROGRESS.md
+INTEGRATION_PLAN.md
